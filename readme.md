@@ -74,7 +74,7 @@ from pyspark.sql import functions as F
 movAvg = df.withColumn("movingAverage", F.avg("price")
              .over( Window.partitionBy("company_symbol").rowsBetween(-1,1)) )
 ```
-To see our data with the new moving average column we can issue a 
+To see our data with the new moving average column we can issue a
 movAvg.show().
 
 `movAvg.show()`

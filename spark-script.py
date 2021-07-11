@@ -3,7 +3,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession.\
         builder.\
         appName("pyspark-notebook2").\
-        master("spark://spark-master:7080").\
+        master("spark://spark-master:7077").\
         config("spark.executor.memory", "1g").\
         config("spark.mongodb.input.uri","mongodb://mongo1:27017,mongo2:27018,mongo3:27019/Stocks.Source?replicaSet=rs0").\
         config("spark.mongodb.output.uri","mongodb://mongo1:27017,mongo2:27018,mongo3:27019/Stocks.Source?replicaSet=rs0").\
